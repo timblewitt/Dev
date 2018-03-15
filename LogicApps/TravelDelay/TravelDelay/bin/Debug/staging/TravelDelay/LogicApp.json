@@ -171,7 +171,7 @@
             },
             "Condition": {
               "type": "If",
-              "expression": "@greater(variables('travelDelay'), 20)",
+              "expression": "@greater(variables('travelDelay'), 30)",
               "actions": {
                 "Send_an_email": {
                   "type": "ApiConnection",

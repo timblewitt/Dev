@@ -1,1 +1,5 @@
 C:\Tim\Documents\OneDrive - Sungard AS\Development\GitHub\Logic Apps\TravelDelay\TravelDelay\obj\Debug\TravelDelay.deployproj.CoreCompileInputs.cache
+C:\Tim\Documents\OneDrive - Sungard AS\Development\GitHub\Dev\LogicApps\TravelDelay\TravelDelay\bin\Debug\Deploy-AzureResourceGroup.ps1
+C:\Tim\Documents\OneDrive - Sungard AS\Development\GitHub\Dev\LogicApps\TravelDelay\TravelDelay\bin\Debug\LogicApp.json
+C:\Tim\Documents\OneDrive - Sungard AS\Development\GitHub\Dev\LogicApps\TravelDelay\TravelDelay\bin\Debug\LogicApp.parameters.json
+C:\Tim\Documents\OneDrive - Sungard AS\Development\GitHub\Dev\LogicApps\TravelDelay\TravelDelay\obj\Debug\TravelDelay.deployproj.CoreCompileInputs.cache

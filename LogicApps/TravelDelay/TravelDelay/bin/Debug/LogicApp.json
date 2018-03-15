@@ -171,7 +171,7 @@
             },
             "Condition": {
               "type": "If",
-              "expression": "@greater(variables('travelDelay'), 30)",
+              "expression": "@greater(variables('travelDelay'), 20)",
               "actions": {
                 "Send_an_email": {
                   "type": "ApiConnection",
@@ -210,7 +210,7 @@
               "type": "Recurrence",
               "recurrence": {
                 "frequency": "Minute",
-                "interval": 30
+                "interval": 15
               }
             }
           },
