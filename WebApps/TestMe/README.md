@@ -1,5 +1,5 @@
 # TestMe
-Deploy Web App and SQL database (TimCoDB) first.
+Deploy an Azure Web App and Azure SQL database (TimCoDB) first.
 
 Use dbo.Quiz.sql to populate TimCoDB database.
 
