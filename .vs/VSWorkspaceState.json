@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\LogicApps",
-    "\\WebApps"
+    "\\WebApps",
+    "\\WebApps\\TestMe"
   ],
-  "SelectedNode": "\\WebApps",
+  "SelectedNode": "\\WebApps\\TestMe\\README.md",
   "PreviewInSolutionExplorer": false
 }
