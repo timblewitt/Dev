@@ -16,7 +16,7 @@ Partial Class _Default
         Dim sqlConnString As New SqlClient.SqlConnectionStringBuilder With {
             .DataSource = "timco-sqlserverv7rfc3nuzo56w.database.windows.net",
             .UserID = "timco-admin",
-            .Password = "TopSecret123456",
+            .Password = "TopSecret12345678",
             .InitialCatalog = "TimCoDB"
         }
         Dim sqlConn As New SqlClient.SqlConnection(sqlConnString.ConnectionString)
