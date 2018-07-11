@@ -4,4 +4,6 @@
 
 2. Connect to TimCoDB SQL database and use dbo.Quiz.sql to populate table with quiz data.
 
-3. Deploy TestMe web site to Azure Web App.
+3. Update web site code with SQL server connection details and password.
+
+4. Deploy TestMe web site to Azure Web App.
