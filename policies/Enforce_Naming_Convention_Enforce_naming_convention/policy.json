@@ -1,0 +1,178 @@
+{
+ "properties": {
+  "displayName": "Enforce Naming Convention",
+  "policyType": "Custom",
+  "mode": "Indexed",
+  "metadata": {
+   "createdBy": "c07d3513-e68e-4997-af81-d623ee0c16b7",
+   "createdOn": "2022-03-31T12:23:36.7808483Z",
+   "updatedBy": "c07d3513-e68e-4997-af81-d623ee0c16b7",
+   "updatedOn": "2022-05-09T14:29:38.2456834Z"
+  },
+  "parameters": {
+   "subId": {
+    "type": "string"
+   },
+   "regionId": {
+    "type": "string",
+    "defaultValue": "uks"
+   }
+  },
+  "policyRule": {
+   "if": {
+    "anyOf": [
+     {
+      "allOf": [
+       {
+        "field": "type",
+        "equals": "Microsoft.Network/virtualNetworks"
+       },
+       {
+        "not": {
+         "anyOf": [
+          {
+           "field": "name",
+           "like": "[concat('vnet-',parameters('subId'),'-',parameters('regionId'),'-*')]"
+          }
+         ]
+        }
+       }
+      ]
+     },
+     {
+      "allOf": [
+       {
+        "field": "type",
+        "equals": "Microsoft.KeyVault/vaults"
+       },
+       {
+        "not": {
+         "anyOf": [
+          {
+           "field": "name",
+           "like": "[concat('kv-',parameters('subId'),'-',parameters('regionId'),'-*')]"
+          }
+         ]
+        }
+       }
+      ]
+     },
+     {
+      "allOf": [
+       {
+        "field": "type",
+        "equals": "Microsoft.Automation/automationAccounts"
+       },
+       {
+        "not": {
+         "anyOf": [
+          {
+           "field": "name",
+           "like": "[concat('aa-',parameters('subId'),'-',parameters('regionId'),'-*')]"
+          }
+         ]
+        }
+       }
+      ]
+     },
+     {
+      "allOf": [
+       {
+        "field": "type",
+        "equals": "Microsoft.OperationalInsights/workspaces"
+       },
+       {
+        "not": {
+         "anyOf": [
+          {
+           "field": "name",
+           "like": "[concat('log-',parameters('subId'),'-',parameters('regionId'),'-*')]"
+          }
+         ]
+        }
+       }
+      ]
+     },
+     {
+      "allOf": [
+       {
+        "field": "type",
+        "equals": "Microsoft.Network/networkSecurityGroups"
+       },
+       {
+        "not": {
+         "anyOf": [
+          {
+           "field": "name",
+           "like": "[concat('nsg-',parameters('subId'),'-',parameters('regionId'),'-*')]"
+          }
+         ]
+        }
+       }
+      ]
+     },
+     {
+      "allOf": [
+       {
+        "field": "type",
+        "equals": "Microsoft.Network/routeTables"
+       },
+       {
+        "not": {
+         "anyOf": [
+          {
+           "field": "name",
+           "like": "[concat('rt-',parameters('subId'),'-',parameters('regionId'),'-*')]"
+          }
+         ]
+        }
+       }
+      ]
+     },
+     {
+      "allOf": [
+       {
+        "field": "type",
+        "equals": "Microsoft.Storage/storageAccounts"
+       },
+       {
+        "not": {
+         "anyOf": [
+          {
+           "field": "name",
+           "like": "[concat('st*')]"
+          }
+         ]
+        }
+       }
+      ]
+     },
+     {
+      "allOf": [
+       {
+        "field": "type",
+        "equals": "Microsoft.RecoveryServices/vaults"
+       },
+       {
+        "not": {
+         "anyOf": [
+          {
+           "field": "name",
+           "like": "[concat('rsv-',parameters('subId'),'-',parameters('regionId'),'-*')]"
+          }
+         ]
+        }
+       }
+      ]
+     }
+    ]
+   },
+   "then": {
+    "effect": "deny"
+   }
+  }
+ },
+ "id": "/providers/Microsoft.Management/managementGroups/Prod/providers/Microsoft.Authorization/policyDefinitions/Enforce naming convention",
+ "type": "Microsoft.Authorization/policyDefinitions",
+ "name": "Enforce naming convention"
+}
